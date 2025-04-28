@@ -1,4 +1,7 @@
 # EX-06 - Looping
+NAME : R.PRIYANGA
+
+REG NO :212223230161
 ## AIM:
 Write a C program to print even numbers ranging from M to N (including M and N values).
 
@@ -13,15 +16,27 @@ Write a C program to print even numbers ranging from M to N (including M and N v
 
 ## PROGRAM:
 
+```
+#include <stdio.h>
+
+int main() {
+    int M, N;
+    scanf("%d %d", &M, &N);
+    int start = (M > N) ? M : N;
+    int end = (M < N) ? M : N;
+    if (start % 2 != 0) {
+        start--;
+    }
+    for (int i = start; i >= end; i -= 2) {
+        printf("%d ", i);
+    }
+    return 0;
+}
+
+```
 ## OUTPUT:
 
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/7706e4af-3377-4de9-b270-ea57262d634c)
 
 
 ## RESULT:
@@ -45,12 +60,27 @@ Write a C program to print the given triangular pattern using loop.
 5.	Continue the loop until you have printed the entire triangular pattern.
 
 ## PROGRAM:
-
+```
+#include<stdio.h>
+int main()
+{
+    int i,j,n;
+    scanf("%d",&n);
+    for(i=n;i>=1;i--)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("$");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
 
 ## OUTPUT:
 
-
-
+![image](https://github.com/user-attachments/assets/828e31ed-01e3-4bdf-92b3-b94f7faf1899)
 
 
 ## RESULT:
@@ -74,10 +104,36 @@ Write a C program to perform addition and subtraction of two numbers using funct
 4.	Call the addition and subtraction functions, passing the two numbers as arguments.
 
 ## PROGRAM:
-
+```
+#include<stdio.h>
+int add(int,int);
+int sub(int,int);
+int main()
+{
+    int a,b,c,d;
+    scanf("%d%d",&a,&b);
+    c = add(a,b);
+    d = sub(a,b);
+    printf("Addition: %d\n",c);
+    printf("Subtraction: %d",d);
+}
+int add(int x,int y)
+{
+    int z;
+    z = x + y;
+    return z;
+}
+int sub(int x,int y)
+{
+    int z;
+    z = x - y;
+    return z;
+}
+```
 
 ## OUTPUT:
 
+![image](https://github.com/user-attachments/assets/3f097f5b-8cd8-4bd8-99d9-e5489cb31770)
 
 
 
@@ -106,11 +162,26 @@ Write a c program to find the sum of odd digits using for loop
 6.	Print the sum of odd digits.
 
 ## PROGRAM:
-
+```
+#include<stdio.h>
+int main()
+{
+    int a,b,sum=0,i;
+    scanf("%d%d",&a,&b);
+    for(i=a;i<=b;i++)
+    {
+        if(i%2!=0)
+        {
+            sum += i;
+        }
+    }
+    printf("%d",sum);
+    return 0;
+}
+```
 
 ## OUTPUT:
-
-
+![image](https://github.com/user-attachments/assets/51eacd75-3594-4dbe-870e-1e443d18778b)
 
 
 ## RESULT:
@@ -136,9 +207,24 @@ d.	After the loop, print the factorial value.
 5.	End
 
 ## PROGRAM:
+```
+#include<stdio.h>
+int main()
+{
+    int n,fact=1;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+    {
+        fact*=i;
+    }
+    printf("Factorial value is: %d",fact);
+    return 0;
+}
 
+```
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/7f2f6ac0-7c45-41de-a54a-9be7a37eeda1)
 
 ## RESULT:
 The program correctly computes the factorial of a given number using a separate function and displays the result.
